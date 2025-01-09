@@ -1,0 +1,261 @@
+/* Add font files for Baloo */
+/*@font-face {
+    font-family: 'Baloo';
+    src: url('Wanime/fonts/Baloo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }*/
+  /* Add font files for Arimo */
+  @media screen and (max-width:1920px){ 
+    body{
+      width: 1920px;
+    }
+   }
+   @media screen and (max-width:1366px){ 
+    body{
+      width: 1366px;
+      height: 1024px;
+    }
+    .header{
+      width:1336px;
+    }
+    .icon{
+      width: 209px;
+      height: auto;
+      padding-right: 200px;
+      margin-left:0px;
+      float: left;
+    }
+    .article{
+      padding-right: 2000px;
+      padding-left: 0px;
+    }
+   }
+   @media screen and (max-width:393px){ 
+    body{
+      width: 393px;
+    }
+    .header{
+      width:1336px;
+    }
+    .icon{
+      width: 209px;
+      height: auto;
+      /*padding-right: 1000px;
+      float: left;*/
+    }
+    .article{
+      padding-right: 2000px;
+      padding-left: 0px;
+    }
+   }
+   
+  @font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo-Italic-VariableFont_wght.ttf') format('truetype'),
+         url('../fonts/Arimo-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Add font files for Arial */
+  @font-face {
+    font-family: 'Arial';
+    src: url('fonts/arial.ttf') format('truetype'),
+         url('fonts/arialbd.ttf') format('truetype'),
+         url('fonts/arialbi.ttf') format('truetype'),
+         url('fonts/ariali.ttf') format('truetype'),
+         url('fonts/ariblk.ttf') format('truetype'),
+         url('fonts/ARIALN.TTF') format('truetype'),
+         url('fonts/ARIALNB.TTF') format('truetype'),
+         url('fonts/ARIALNBI.TTF') format('truetype'),
+         url('fonts/ARIALNI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  :root {
+    /*--font-family-baloo: 'Baloo', sans-serif;*/
+    -font-family-Arimo: 'Arimo', sans-serif;
+    -font-family-arial: 'Arial', sans-serif;
+  }/*以上為添加文字*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+      width: 1920px;
+      height: 1080px;
+      background-color: white;
+      margin: auto;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: fixed; /* To ensure it's on top of other content */
+      z-index: -1; /* Ensure it's not hidden by other elements */
+    }
+    header{
+        width: 1920px;
+        height: 161px;
+        background: linear-gradient(to right, #FF6392, #1B1F3B 80%);
+        /*padding: 0;*/
+        clip-path: ellipse( 70% 100%  at 50% 100%);
+        transform: scaleY(-1); /* 水平翻轉 */
+        z-index: 10;
+        position: relative;
+        top: 0;
+    }
+    header a{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 813px;
+      padding-right: 813px;
+      display: flex;
+    }
+    .icon{
+        width: 294px;
+        height: 69px;
+        /*margin-bottom: 40px;*/
+        margin: auto;
+        transform: scaleY(-1); /* 水平翻轉 */
+        z-index: 50;
+    }
+    article{
+        padding-top: 117px;
+        padding-left: 762px;
+        padding-right: 763px;
+        width: 395px;
+        height: 632px;
+        margin: 0;
+    }
+    p{
+    font-family: 'Arial, sans-serif';
+    color:#1B1F3B;
+    }
+
+    form{
+        width: 395px;
+        height: 305px;
+    }
+    /*讓輸入框的兩邊變成半圓形 */
+    input[type="email"],
+    input[type="password"] {
+    display: flex;
+    flex-wrap: wrap; /* 讓子元素換行 */
+    gap: 21px; /* 設定輸入框之間的間距 */
+    flex: 1; /* 讓輸入框均分空間 */
+    min-width: 150px; /* 設定最小寬度，防止太窄 */
+    width: 395px; /* 輸入框寬度填滿容器 */
+    padding: 10px; /* 內部間距，讓文字更易讀 */
+    margin: 0px 0px 21px 0px; /* 上下間距，分隔輸入框 */
+    border: 1px solid #ccc; /* 輕微的邊框 */
+    border-radius: 25px; /* 設定邊框圓角，數值越大圓弧越明顯 */
+    box-sizing: border-box; /* 確保內部間距不會增加寬度 */
+    font-size: 20px; /* 設定字體大小 */
+    }/* 根據輸入框的高度調整 border-radius 的值 */
+
+    /* 登入按鈕的樣式 */
+    input[type="submit"] {
+    background-color: #1B1F3B; /* 背景顏色 */
+    color: #fff; /* 字體顏色設為白色 */
+    border: none; /* 移除邊框 */
+    padding: 10px 20px; /* 設定內部間距，讓按鈕更容易點擊 */
+    border-radius: 25px; /* 讓按鈕兩邊呈現半圓形 */
+    font-size: 30px; /* 設定字體大小 */
+    cursor: pointer; /* 當滑鼠移到按鈕上時顯示指標 */
+    width: 330px; /* 如果希望按鈕寬度跟輸入框一致，設為100% */
+    box-sizing: border-box; /* 確保內部間距不影響按鈕寬度 */
+    }
+
+    /* 當按鈕被滑鼠懸停時的效果 */
+    input[type="submit"]:hover {
+    background-color: #FF6392; /* 改變背景顏色，增加互動性 */
+    }
+    .userimage{
+        padding-left: 102px;
+        padding-bottom: 44px;
+        /*padding-left: 102px;*/
+    }
+    article{
+      width: 1920px;
+      height: 632px;
+    }
+    article h1{
+        /*padding-right: 44px;*/
+        font-size: 60px;
+        padding-bottom: 32px;
+        font-family:Arial,sans-serif;
+        font-weight: 900;
+        color: #1B1F3B;
+    }
+    .name{
+        font-size: 30px;
+        width: 395px;
+        height: 88px;
+    }
+    .click{
+        padding-top: 32px;
+        padding-left: 33px;
+    }
+    .marquee-container {
+        width: 1920px; /* 可根據需求調整 */
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        opacity: 0%;
+        /*border: 1px solid #ccc; /* 可選，方便觀察容器邊界 */
+      }
+      @keyframes scroll{
+        from{transform: translateX(100%)}
+        to{transform: translateX(-500%)}
+      }
+      
+      @keyframes scroll2{
+        from{transform: translateX(100%)}
+        to{transform: translateX(-500%)}
+      }
+      
+      .decorate-wall{
+        display: flex;
+        /*height : 150px*/
+        .decorate-wrapper{
+          display: flex;
+          animation: scroll 40s linear infinite;
+      
+          &:nth-child(1){
+          animation: scroll 40s linear infinite;
+          animation-delay: -17s;
+          }
+      
+          &.first>.decorate:first-child{
+            color: linear-gradient(to right, #FF6392, #1B1F3B 80%);;
+            /*color: #1B1F3B;*/
+          }
+      
+          &.second>.decorate:first-child{
+            color: #FF6392;
+          }
+          .decorate{
+            font-size: 100px;
+            color: #D9D9D9;
+            font-family: var(--font-family-arial);
+            font-weight: 900;
+            letter-spacing: 0.7em;
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 300px;
+            margin-left: 300px;
+            padding-top: 160px;
+            padding-bottom: 0px;
+            border-radius: 50%;
+            /*display: flex;
+            justify-content: center;
+            align-items: center;*/
+          }
+        }
+      }
